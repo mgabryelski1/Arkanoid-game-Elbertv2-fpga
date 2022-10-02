@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\_FPGA_Proj\Spartan3\_GAME\Arkanoidgame\breakout.ncd
+OUTFILE=D:\_FPGA_Proj\Spartan3\_GAME\Arkanoidgame\breakout.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-5tq144
+WORKINGDIR=D:\_FPGA_Proj\Spartan3\_GAME\Arkanoidgame
+LICENSE=WebPack
+USER_INFO=212004825_0_0_110

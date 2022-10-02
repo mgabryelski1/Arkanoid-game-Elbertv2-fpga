@@ -1,0 +1,16 @@
+# Clock 12 MHz
+NET "clk12"  LOC = P129  | IOSTANDARD = LVCMOS33 | PERIOD = 12MHz;
+ 
+#VGA pins 
+NET "hsync" LOC = "P93"  | IOSTANDARD = LVCMOS33 | DRIVE = 12 | SLEW = FAST ;                                             
+NET "vsync" LOC = "P92"  | IOSTANDARD = LVCMOS33 | DRIVE = 12 | SLEW = FAST  ;                                        
+NET "red"   LOC = "P105" | IOSTANDARD = LVCMOS33 |DRIVE = 12 | SLEW = FAST ;                                           
+NET "green" LOC = "P102" | IOSTANDARD = LVCMOS33 | DRIVE = 12 | SLEW = FAST ;                                            
+NET "blue"  LOC = "P98"  | IOSTANDARD = LVCMOS33 |DRIVE = 12 | SLEW = FAST ;
+
+#Padd pins 
+                                          
+NET "rota"   LOC = "P77" | IOSTANDARD = LVCMOS33 | PULLUP   ;     #sw6 
+NET "rotb"   LOC = "P75" | IOSTANDARD = LVCMOS33 | PULLUP ;       #sw4
+                                                                           
+NET "de"     LOC = "P80" | IOSTANDARD = LVCMOS33 | PULLUP ;       #sw1

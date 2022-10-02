@@ -1,0 +1,17 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Sep 13 11:01:20 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "de" LOCATE = SITE "P80" LEVEL 1;
+COMP "red" LOCATE = SITE "P105" LEVEL 1;
+COMP "blue" LOCATE = SITE "P98" LEVEL 1;
+COMP "rota" LOCATE = SITE "P77" LEVEL 1;
+COMP "rotb" LOCATE = SITE "P75" LEVEL 1;
+COMP "clk12" LOCATE = SITE "P129" LEVEL 1;
+COMP "green" LOCATE = SITE "P102" LEVEL 1;
+COMP "hsync" LOCATE = SITE "P93" LEVEL 1;
+COMP "vsync" LOCATE = SITE "P92" LEVEL 1;
+NET "Clock12MHz/CLKIN_IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
+SCHEMATIC END;
+

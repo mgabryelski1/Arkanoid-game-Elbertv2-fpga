@@ -1,0 +1,4 @@
+verilog work "src/signal_generator.v"
+verilog work "src/game.v"
+verilog work "PLL_1.v"
+verilog work "src/breakout.v"

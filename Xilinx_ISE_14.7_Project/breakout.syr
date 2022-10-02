@@ -1,0 +1,822 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: breakout.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "breakout.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "breakout"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-tq144
+
+---- Source Options
+Top Module Name                    : breakout
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "src/signal_generator.v" in library work
+Compiling verilog file "src/game.v" in library work
+Module <signal_generator> compiled
+Compiling verilog file "PLL_1.v" in library work
+Module <game> compiled
+Compiling verilog file "src/breakout.v" in library work
+Module <PLL_1> compiled
+Module <breakout> compiled
+No errors in compilation
+Analysis of file <"breakout.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <breakout> in library <work>.
+
+Analyzing hierarchy for module <PLL_1> in library <work>.
+
+Analyzing hierarchy for module <signal_generator> in library <work>.
+
+Analyzing hierarchy for module <game> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <breakout>.
+Module <breakout> is correct for synthesis.
+ 
+Analyzing module <PLL_1> in library <work>.
+Module <PLL_1> is correct for synthesis.
+ 
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <CLKIN_IBUFG_INST> in unit <PLL_1>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <CLKIN_IBUFG_INST> in unit <PLL_1>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <CLKIN_IBUFG_INST> in unit <PLL_1>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <CLKIN_IBUFG_INST> in unit <PLL_1>.
+    Set user-defined property "CLKDV_DIVIDE =  2.000000" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "CLKFX_DIVIDE =  6" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "CLKFX_MULTIPLY =  25" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "CLKIN_DIVIDE_BY_2 =  FALSE" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "CLKIN_PERIOD =  83.333000" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "CLKOUT_PHASE_SHIFT =  NONE" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "CLK_FEEDBACK =  1X" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "DESKEW_ADJUST =  SYSTEM_SYNCHRONOUS" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "DFS_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "DLL_FREQUENCY_MODE =  LOW" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "DSS_MODE =  NONE" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "DUTY_CYCLE_CORRECTION =  TRUE" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "FACTORY_JF =  C080" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "PHASE_SHIFT =  0" for instance <DCM_SP_INST> in unit <PLL_1>.
+    Set user-defined property "STARTUP_WAIT =  FALSE" for instance <DCM_SP_INST> in unit <PLL_1>.
+Analyzing module <signal_generator> in library <work>.
+Module <signal_generator> is correct for synthesis.
+ 
+Analyzing module <game> in library <work>.
+Module <game> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <signal_generator>.
+    Related source file is "src/signal_generator.v".
+    Found 1-bit register for signal <hsync>.
+    Found 10-bit comparator greater for signal <hsync$cmp_gt0000> created at line 56.
+    Found 10-bit comparator lessequal for signal <hsync$cmp_le0000> created at line 56.
+    Found 1-bit register for signal <vsync>.
+    Found 10-bit up counter for signal <xpos>.
+    Found 10-bit up counter for signal <ypos>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <signal_generator> synthesized.
+
+
+Synthesizing Unit <game>.
+    Related source file is "src/game.v".
+WARNING:Xst:646 - Signal <background> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 6-bit register for signal <a>.
+    Found 10-bit comparator greater for signal <a$cmp_gt0000> created at line 499.
+    Found 10-bit comparator greater for signal <a$cmp_gt0001> created at line 499.
+    Found 10-bit comparator less for signal <a$cmp_lt0000> created at line 499.
+    Found 10-bit comparator less for signal <a$cmp_lt0001> created at line 499.
+    Found 10-bit adder carry out for signal <add0000$addsub0000> created at line 273.
+    Found 10-bit comparator less for signal <area$cmp_lt0000> created at line 165.
+    Found 10-bit comparator less for signal <area$cmp_lt0001> created at line 165.
+    Found 32-bit register for signal <b>.
+    Found 10-bit comparator greater for signal <b$cmp_gt0000> created at line 503.
+    Found 10-bit comparator less for signal <b$cmp_lt0000> created at line 503.
+    Found 9-bit adder carry out for signal <ball$addsub0001> created at line 273.
+    Found 10-bit comparator greatequal for signal <ball$cmp_ge0000> created at line 273.
+    Found 10-bit comparator greatequal for signal <ball$cmp_ge0001> created at line 273.
+    Found 11-bit comparator lessequal for signal <ball$cmp_le0000> created at line 273.
+    Found 10-bit comparator lessequal for signal <ball$cmp_le0001> created at line 273.
+    Found 10-bit register for signal <ballX>.
+    Found 10-bit addsub for signal <ballX$addsub0000>.
+    Found 1-bit xor2 for signal <ballX$xor0000> created at line 57.
+    Found 1-bit register for signal <ballXpos>.
+    Found 9-bit register for signal <ballY>.
+    Found 9-bit addsub for signal <ballY$addsub0000>.
+    Found 1-bit xor2 for signal <ballY$xor0000> created at line 61.
+    Found 1-bit register for signal <ballYpos>.
+    Found 10-bit comparator greatequal for signal <bottom$cmp_ge0000> created at line 167.
+    Found 10-bit comparator greatequal for signal <brick1$cmp_ge0000> created at line 172.
+    Found 10-bit comparator greatequal for signal <brick1$cmp_ge0001> created at line 172.
+    Found 10-bit comparator lessequal for signal <brick1$cmp_le0000> created at line 172.
+    Found 10-bit comparator lessequal for signal <brick1$cmp_le0001> created at line 172.
+    Found 10-bit comparator greatequal for signal <brick10$cmp_ge0000> created at line 181.
+    Found 10-bit comparator lessequal for signal <brick10$cmp_le0000> created at line 181.
+    Found 10-bit comparator greatequal for signal <brick11$cmp_ge0000> created at line 182.
+    Found 10-bit comparator lessequal for signal <brick11$cmp_le0000> created at line 182.
+    Found 10-bit comparator greatequal for signal <brick12$cmp_ge0000> created at line 183.
+    Found 10-bit comparator lessequal for signal <brick12$cmp_le0000> created at line 183.
+    Found 10-bit comparator greatequal for signal <brick13$cmp_ge0000> created at line 184.
+    Found 10-bit comparator lessequal for signal <brick13$cmp_le0000> created at line 184.
+    Found 10-bit comparator greatequal for signal <brick2$cmp_ge0000> created at line 173.
+    Found 10-bit comparator lessequal for signal <brick2$cmp_le0000> created at line 173.
+    Found 10-bit comparator greatequal for signal <brick25$cmp_ge0000> created at line 196.
+    Found 10-bit comparator lessequal for signal <brick25$cmp_le0000> created at line 196.
+    Found 10-bit comparator greatequal for signal <brick3$cmp_ge0000> created at line 174.
+    Found 10-bit comparator lessequal for signal <brick3$cmp_le0000> created at line 174.
+    Found 10-bit comparator greatequal for signal <brick37$cmp_ge0000> created at line 208.
+    Found 10-bit comparator lessequal for signal <brick37$cmp_le0000> created at line 208.
+    Found 10-bit comparator greatequal for signal <brick4$cmp_ge0000> created at line 175.
+    Found 10-bit comparator lessequal for signal <brick4$cmp_le0000> created at line 175.
+    Found 10-bit comparator greatequal for signal <brick49$cmp_ge0000> created at line 220.
+    Found 10-bit comparator lessequal for signal <brick49$cmp_le0000> created at line 220.
+    Found 10-bit comparator greatequal for signal <brick5$cmp_ge0000> created at line 176.
+    Found 10-bit comparator lessequal for signal <brick5$cmp_le0000> created at line 176.
+    Found 10-bit comparator greatequal for signal <brick6$cmp_ge0000> created at line 177.
+    Found 10-bit comparator lessequal for signal <brick6$cmp_le0000> created at line 177.
+    Found 10-bit comparator greatequal for signal <brick61$cmp_ge0000> created at line 232.
+    Found 10-bit comparator lessequal for signal <brick61$cmp_le0000> created at line 232.
+    Found 10-bit comparator greatequal for signal <brick7$cmp_ge0000> created at line 178.
+    Found 10-bit comparator lessequal for signal <brick7$cmp_le0000> created at line 178.
+    Found 10-bit comparator greatequal for signal <brick73$cmp_ge0000> created at line 244.
+    Found 10-bit comparator lessequal for signal <brick73$cmp_le0000> created at line 244.
+    Found 10-bit comparator greatequal for signal <brick8$cmp_ge0000> created at line 179.
+    Found 10-bit comparator lessequal for signal <brick8$cmp_le0000> created at line 179.
+    Found 10-bit comparator greatequal for signal <brick85$cmp_ge0000> created at line 256.
+    Found 10-bit comparator lessequal for signal <brick85$cmp_le0000> created at line 256.
+    Found 10-bit comparator greatequal for signal <brick9$cmp_ge0000> created at line 180.
+    Found 10-bit comparator lessequal for signal <brick9$cmp_le0000> created at line 180.
+    Found 1-bit register for signal <brick_alive1>.
+    Found 10-bit comparator greater for signal <brick_alive1$cmp_gt0000> created at line 409.
+    Found 10-bit comparator greater for signal <brick_alive1$cmp_gt0001> created at line 409.
+    Found 10-bit comparator less for signal <brick_alive1$cmp_lt0000> created at line 409.
+    Found 10-bit comparator less for signal <brick_alive1$cmp_lt0001> created at line 409.
+    Found 1-bit register for signal <brick_alive10>.
+    Found 10-bit comparator greater for signal <brick_alive10$cmp_gt0000> created at line 436.
+    Found 10-bit comparator less for signal <brick_alive10$cmp_lt0000> created at line 436.
+    Found 1-bit register for signal <brick_alive11>.
+    Found 10-bit comparator greater for signal <brick_alive11$cmp_gt0000> created at line 439.
+    Found 10-bit comparator less for signal <brick_alive11$cmp_lt0000> created at line 439.
+    Found 1-bit register for signal <brick_alive12>.
+    Found 10-bit comparator greater for signal <brick_alive12$cmp_gt0000> created at line 442.
+    Found 10-bit comparator less for signal <brick_alive12$cmp_lt0000> created at line 442.
+    Found 1-bit register for signal <brick_alive13>.
+    Found 10-bit comparator greater for signal <brick_alive13$cmp_gt0000> created at line 445.
+    Found 10-bit comparator less for signal <brick_alive13$cmp_lt0000> created at line 445.
+    Found 1-bit register for signal <brick_alive14>.
+    Found 1-bit register for signal <brick_alive15>.
+    Found 1-bit register for signal <brick_alive16>.
+    Found 1-bit register for signal <brick_alive17>.
+    Found 1-bit register for signal <brick_alive18>.
+    Found 1-bit register for signal <brick_alive19>.
+    Found 1-bit register for signal <brick_alive2>.
+    Found 10-bit comparator greater for signal <brick_alive2$cmp_gt0000> created at line 412.
+    Found 10-bit comparator less for signal <brick_alive2$cmp_lt0000> created at line 412.
+    Found 1-bit register for signal <brick_alive20>.
+    Found 1-bit register for signal <brick_alive21>.
+    Found 1-bit register for signal <brick_alive22>.
+    Found 1-bit register for signal <brick_alive23>.
+    Found 1-bit register for signal <brick_alive24>.
+    Found 1-bit register for signal <brick_alive25>.
+    Found 1-bit register for signal <brick_alive26>.
+    Found 1-bit register for signal <brick_alive27>.
+    Found 1-bit register for signal <brick_alive28>.
+    Found 1-bit register for signal <brick_alive29>.
+    Found 1-bit register for signal <brick_alive3>.
+    Found 10-bit comparator greater for signal <brick_alive3$cmp_gt0000> created at line 415.
+    Found 10-bit comparator less for signal <brick_alive3$cmp_lt0000> created at line 415.
+    Found 1-bit register for signal <brick_alive30>.
+    Found 1-bit register for signal <brick_alive31>.
+    Found 1-bit register for signal <brick_alive32>.
+    Found 1-bit register for signal <brick_alive33>.
+    Found 1-bit register for signal <brick_alive34>.
+    Found 1-bit register for signal <brick_alive35>.
+    Found 1-bit register for signal <brick_alive36>.
+    Found 1-bit register for signal <brick_alive37>.
+    Found 10-bit comparator greater for signal <brick_alive37$cmp_gt0000> created at line 524.
+    Found 10-bit comparator less for signal <brick_alive37$cmp_lt0000> created at line 524.
+    Found 1-bit register for signal <brick_alive38>.
+    Found 1-bit register for signal <brick_alive39>.
+    Found 1-bit register for signal <brick_alive4>.
+    Found 10-bit comparator greater for signal <brick_alive4$cmp_gt0000> created at line 418.
+    Found 10-bit comparator less for signal <brick_alive4$cmp_lt0000> created at line 418.
+    Found 1-bit register for signal <brick_alive40>.
+    Found 1-bit register for signal <brick_alive41>.
+    Found 1-bit register for signal <brick_alive42>.
+    Found 1-bit register for signal <brick_alive43>.
+    Found 1-bit register for signal <brick_alive44>.
+    Found 1-bit register for signal <brick_alive45>.
+    Found 1-bit register for signal <brick_alive46>.
+    Found 1-bit register for signal <brick_alive47>.
+    Found 1-bit register for signal <brick_alive48>.
+    Found 1-bit register for signal <brick_alive49>.
+    Found 10-bit comparator greater for signal <brick_alive49$cmp_gt0000> created at line 560.
+    Found 10-bit comparator less for signal <brick_alive49$cmp_lt0000> created at line 560.
+    Found 1-bit register for signal <brick_alive5>.
+    Found 10-bit comparator greater for signal <brick_alive5$cmp_gt0000> created at line 421.
+    Found 10-bit comparator less for signal <brick_alive5$cmp_lt0000> created at line 421.
+    Found 1-bit register for signal <brick_alive50>.
+    Found 1-bit register for signal <brick_alive51>.
+    Found 1-bit register for signal <brick_alive52>.
+    Found 1-bit register for signal <brick_alive53>.
+    Found 1-bit register for signal <brick_alive54>.
+    Found 1-bit register for signal <brick_alive55>.
+    Found 1-bit register for signal <brick_alive56>.
+    Found 1-bit register for signal <brick_alive57>.
+    Found 1-bit register for signal <brick_alive58>.
+    Found 1-bit register for signal <brick_alive59>.
+    Found 1-bit register for signal <brick_alive6>.
+    Found 1-bit register for signal <brick_alive60>.
+    Found 1-bit register for signal <brick_alive61>.
+    Found 10-bit comparator greater for signal <brick_alive61$cmp_gt0000> created at line 596.
+    Found 10-bit comparator less for signal <brick_alive61$cmp_lt0000> created at line 596.
+    Found 1-bit register for signal <brick_alive62>.
+    Found 1-bit register for signal <brick_alive63>.
+    Found 1-bit register for signal <brick_alive64>.
+    Found 1-bit register for signal <brick_alive65>.
+    Found 1-bit register for signal <brick_alive66>.
+    Found 1-bit register for signal <brick_alive67>.
+    Found 1-bit register for signal <brick_alive68>.
+    Found 1-bit register for signal <brick_alive69>.
+    Found 1-bit register for signal <brick_alive7>.
+    Found 1-bit register for signal <brick_alive70>.
+    Found 1-bit register for signal <brick_alive71>.
+    Found 1-bit register for signal <brick_alive72>.
+    Found 1-bit register for signal <brick_alive73>.
+    Found 10-bit comparator greater for signal <brick_alive73$cmp_gt0000> created at line 632.
+    Found 10-bit comparator less for signal <brick_alive73$cmp_lt0000> created at line 632.
+    Found 1-bit register for signal <brick_alive74>.
+    Found 1-bit register for signal <brick_alive75>.
+    Found 1-bit register for signal <brick_alive76>.
+    Found 1-bit register for signal <brick_alive77>.
+    Found 1-bit register for signal <brick_alive78>.
+    Found 1-bit register for signal <brick_alive79>.
+    Found 1-bit register for signal <brick_alive8>.
+    Found 10-bit comparator greater for signal <brick_alive8$cmp_gt0000> created at line 430.
+    Found 10-bit comparator less for signal <brick_alive8$cmp_lt0000> created at line 430.
+    Found 1-bit register for signal <brick_alive80>.
+    Found 1-bit register for signal <brick_alive81>.
+    Found 1-bit register for signal <brick_alive82>.
+    Found 1-bit register for signal <brick_alive83>.
+    Found 1-bit register for signal <brick_alive84>.
+    Found 1-bit register for signal <brick_alive85>.
+    Found 10-bit comparator greater for signal <brick_alive85$cmp_gt0000> created at line 668.
+    Found 10-bit comparator less for signal <brick_alive85$cmp_lt0000> created at line 668.
+    Found 1-bit register for signal <brick_alive86>.
+    Found 1-bit register for signal <brick_alive87>.
+    Found 1-bit register for signal <brick_alive88>.
+    Found 1-bit register for signal <brick_alive89>.
+    Found 1-bit register for signal <brick_alive9>.
+    Found 10-bit comparator greater for signal <brick_alive9$cmp_gt0000> created at line 433.
+    Found 10-bit comparator less for signal <brick_alive9$cmp_lt0000> created at line 433.
+    Found 1-bit register for signal <brick_alive90>.
+    Found 1-bit register for signal <brick_alive91>.
+    Found 1-bit register for signal <brick_alive92>.
+    Found 1-bit register for signal <brick_alive93>.
+    Found 1-bit register for signal <brick_alive94>.
+    Found 1-bit register for signal <brick_alive95>.
+    Found 1-bit register for signal <brick_alive96>.
+    Found 28-bit up counter for signal <counter>.
+    Found 10-bit comparator lessequal for signal <left$cmp_le0000> created at line 168.
+    Found 6-bit down counter for signal <missTimer>.
+    Found 10-bit adder for signal <paddle$add0001> created at line 271.
+    Found 9-bit adder carry out for signal <paddle$addsub0002> created at line 271.
+    Found 9-bit adder carry out for signal <paddle$addsub0003> created at line 271.
+    Found 10-bit comparator greatequal for signal <paddle$cmp_ge0000> created at line 271.
+    Found 10-bit comparator greatequal for signal <paddle$cmp_ge0001> created at line 271.
+    Found 34-bit comparator lessequal for signal <paddle$cmp_le0000> created at line 271.
+    Found 10-bit comparator lessequal for signal <paddle$cmp_le0001> created at line 271.
+    Found 9-bit updown accumulator for signal <paddlePosition>.
+    Found 10-bit comparator greatequal for signal <right$cmp_ge0000> created at line 169.
+    Found 10-bit comparator lessequal for signal <top$cmp_le0000> created at line 166.
+    Found 1-bit register for signal <Xbounce>.
+    Found 1-bit register for signal <Ybounce>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   1 Accumulator(s).
+	inferred 157 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred  94 Comparator(s).
+Unit <game> synthesized.
+
+
+Synthesizing Unit <PLL_1>.
+    Related source file is "PLL_1.v".
+Unit <PLL_1> synthesized.
+
+
+Synthesizing Unit <breakout>.
+    Related source file is "src/breakout.v".
+WARNING:Xst:646 - Signal <clkOut> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <clkInBuf> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <clk25>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <breakout> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 10-bit adder                                          : 1
+ 10-bit adder carry out                                : 1
+ 10-bit addsub                                         : 1
+ 9-bit adder carry out                                 : 3
+ 9-bit addsub                                          : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 28-bit up counter                                     : 1
+ 6-bit down counter                                    : 1
+# Accumulators                                         : 1
+ 9-bit updown accumulator                              : 1
+# Registers                                            : 107
+ 1-bit register                                        : 103
+ 10-bit register                                       : 1
+ 32-bit register                                       : 1
+ 6-bit register                                        : 1
+ 9-bit register                                        : 1
+# Comparators                                          : 96
+ 10-bit comparator greatequal                          : 26
+ 10-bit comparator greater                             : 21
+ 10-bit comparator less                                : 22
+ 10-bit comparator lessequal                           : 25
+ 11-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <a_0> in Unit <game_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <a_1> <a_4> 
+INFO:Xst:2261 - The FF/Latch <b_1> in Unit <game_inst> is equivalent to the following FF/Latch, which will be removed : <brick_alive31> 
+INFO:Xst:2261 - The FF/Latch <a_3> in Unit <game_inst> is equivalent to the following FF/Latch, which will be removed : <a_5> 
+INFO:Xst:2261 - The FF/Latch <a_2> in Unit <game_inst> is equivalent to the following FF/Latch, which will be removed : <brick_alive30> 
+INFO:Xst:2261 - The FF/Latch <b_3> in Unit <game_inst> is equivalent to the following 6 FFs/Latches, which will be removed : <b_4> <b_5> <b_6> <b_7> <b_8> <b_9> 
+WARNING:Xst:1293 - FF/Latch <a_0> has a constant value of 0 in block <game_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <b_0> has a constant value of 1 in block <game_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <b_3> has a constant value of 0 in block <game_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <b_10> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_11> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_12> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_13> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_14> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_15> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_16> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_17> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_18> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_19> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_20> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_21> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_22> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_23> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_24> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_25> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_26> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_27> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_28> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_29> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_30> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_31> of sequential type is unconnected in block <game_inst>.
+WARNING:Xst:2677 - Node <b_10> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_11> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_12> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_13> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_14> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_15> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_16> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_17> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_18> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_19> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_20> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_21> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_22> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_23> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_24> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_25> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_26> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_27> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_28> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_29> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_30> of sequential type is unconnected in block <game>.
+WARNING:Xst:2677 - Node <b_31> of sequential type is unconnected in block <game>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 10-bit adder                                          : 1
+ 10-bit adder carry out                                : 1
+ 10-bit addsub                                         : 1
+ 9-bit adder carry out                                 : 3
+ 9-bit addsub                                          : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 28-bit up counter                                     : 1
+ 6-bit down counter                                    : 1
+# Accumulators                                         : 1
+ 9-bit updown accumulator                              : 1
+# Registers                                            : 138
+ Flip-Flops                                            : 138
+# Comparators                                          : 96
+ 10-bit comparator greatequal                          : 26
+ 10-bit comparator greater                             : 21
+ 10-bit comparator less                                : 22
+ 10-bit comparator lessequal                           : 25
+ 11-bit comparator lessequal                           : 1
+ 34-bit comparator lessequal                           : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <a_0> has a constant value of 0 in block <game>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_1> has a constant value of 0 in block <game>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <a_4> has a constant value of 0 in block <game>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_0> has a constant value of 1 in block <game>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_3> has a constant value of 0 in block <game>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_4> has a constant value of 0 in block <game>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_5> has a constant value of 0 in block <game>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_6> has a constant value of 0 in block <game>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_7> has a constant value of 0 in block <game>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_8> has a constant value of 0 in block <game>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <b_9> has a constant value of 0 in block <game>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <a_3> in Unit <game> is equivalent to the following FF/Latch, which will be removed : <a_5> 
+INFO:Xst:2261 - The FF/Latch <a_2> in Unit <game> is equivalent to the following FF/Latch, which will be removed : <brick_alive30> 
+INFO:Xst:2261 - The FF/Latch <b_1> in Unit <game> is equivalent to the following FF/Latch, which will be removed : <brick_alive31> 
+
+Optimizing unit <breakout> ...
+
+Optimizing unit <signal_generator> ...
+
+Optimizing unit <game> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block breakout, actual ratio is 56.
+FlipFlop clk25 has been replicated 2 time(s)
+FlipFlop signal_generator_inst/xpos_7 has been replicated 1 time(s)
+FlipFlop signal_generator_inst/xpos_8 has been replicated 1 time(s)
+FlipFlop signal_generator_inst/ypos_3 has been replicated 1 time(s)
+FlipFlop signal_generator_inst/ypos_5 has been replicated 1 time(s)
+FlipFlop signal_generator_inst/ypos_6 has been replicated 1 time(s)
+FlipFlop signal_generator_inst/ypos_7 has been replicated 1 time(s)
+FlipFlop signal_generator_inst/ypos_8 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 196
+ Flip-Flops                                            : 196
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : breakout.ngr
+Top Level Output File Name         : breakout
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 9
+
+Cell Usage :
+# BELS                             : 1097
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 60
+#      LUT2                        : 111
+#      LUT2_D                      : 13
+#      LUT2_L                      : 4
+#      LUT3                        : 48
+#      LUT3_D                      : 17
+#      LUT3_L                      : 60
+#      LUT4                        : 372
+#      LUT4_D                      : 28
+#      LUT4_L                      : 53
+#      MUXCY                       : 214
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 103
+# FlipFlops/Latches                : 196
+#      FDE                         : 134
+#      FDR                         : 45
+#      FDRE                        : 17
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 9
+#      IBUF                        : 3
+#      IBUFG                       : 1
+#      OBUF                        : 5
+# DCMs                             : 1
+#      DCM_SP                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-5 
+
+ Number of Slices:                      410  out of    704    58%  
+ Number of Slice Flip Flops:            196  out of   1408    13%  
+ Number of 4 input LUTs:                776  out of   1408    55%  
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    108     8%  
+ Number of GCLKs:                         3  out of     24    12%  
+ Number of DCMs:                          1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)       | Load  |
+-----------------------------------+-----------------------------+-------+
+clk12                              | Clock12MHz/DCM_SP_INST:CLKFX| 3     |
+clk253                             | BUFG                        | 193   |
+-----------------------------------+-----------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 8.114ns (Maximum Frequency: 123.245MHz)
+   Minimum input arrival time before clock: 4.579ns
+   Maximum output required time after clock: 15.543ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk12'
+  Clock period: 5.458ns (frequency: 183.213MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.310ns (Levels of Logic = 0)
+  Source:            clk25_1 (FF)
+  Destination:       clk25 (FF)
+  Source Clock:      clk12 rising 4.2X
+  Destination Clock: clk12 rising 4.2X
+
+  Data Path: clk25_1 to clk25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.495   0.380  clk25_1 (clk25_1)
+     FDR:R                     0.435          clk25
+    ----------------------------------------
+    Total                      1.310ns (0.930ns logic, 0.380ns route)
+                                       (71.0% logic, 29.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk253'
+  Clock period: 8.114ns (frequency: 123.245MHz)
+  Total number of paths / destination ports: 79435 / 399
+-------------------------------------------------------------------------
+Delay:               8.114ns (Levels of Logic = 14)
+  Source:            game_inst/ballY_1 (FF)
+  Destination:       game_inst/b_2 (FF)
+  Source Clock:      clk253 rising
+  Destination Clock: clk253 rising
+
+  Data Path: game_inst/ballY_1 to game_inst/b_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.495   0.607  game_inst/ballY_1 (game_inst/ballY_1)
+     LUT1:I0->O            1   0.561   0.000  game_inst/Madd_ball_addsub0001_cy<1>_rt (game_inst/Madd_ball_addsub0001_cy<1>_rt)
+     MUXCY:S->O            1   0.523   0.000  game_inst/Madd_ball_addsub0001_cy<1> (game_inst/Madd_ball_addsub0001_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  game_inst/Madd_ball_addsub0001_cy<2> (game_inst/Madd_ball_addsub0001_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  game_inst/Madd_ball_addsub0001_cy<3> (game_inst/Madd_ball_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  game_inst/Madd_ball_addsub0001_cy<4> (game_inst/Madd_ball_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  game_inst/Madd_ball_addsub0001_cy<5> (game_inst/Madd_ball_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  game_inst/Madd_ball_addsub0001_cy<6> (game_inst/Madd_ball_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  game_inst/Madd_ball_addsub0001_cy<7> (game_inst/Madd_ball_addsub0001_cy<7>)
+     XORCY:CI->O           1   0.654   0.423  game_inst/Madd_ball_addsub0001_xor<8> (game_inst/ball_addsub0001<8>)
+     LUT2:I1->O            1   0.562   0.000  game_inst/Mcompar_ball_cmp_le0001_lut<8> (game_inst/Mcompar_ball_cmp_le0001_lut<8>)
+     MUXCY:S->O            1   0.523   0.000  game_inst/Mcompar_ball_cmp_le0001_cy<8> (game_inst/Mcompar_ball_cmp_le0001_cy<8>)
+     MUXCY:CI->O           2   0.179   0.446  game_inst/Mcompar_ball_cmp_le0001_cy<9> (game_inst/ball_cmp_le0001)
+     LUT4_D:I1->O         96   0.562   1.092  game_inst/a_not000111 (game_inst/N5)
+     LUT4:I3->O            2   0.561   0.380  game_inst/b_not00011 (game_inst/b_not0001)
+     FDE:CE                    0.156          game_inst/b_1
+    ----------------------------------------
+    Total                      8.114ns (5.166ns logic, 2.948ns route)
+                                       (63.7% logic, 36.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk253'
+  Total number of paths / destination ports: 170 / 116
+-------------------------------------------------------------------------
+Offset:              4.579ns (Levels of Logic = 3)
+  Source:            de (PAD)
+  Destination:       game_inst/b_2 (FF)
+  Destination Clock: clk253 rising
+
+  Data Path: de to game_inst/b_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            32   0.824   1.181  de_IBUF (de_IBUF)
+     LUT2:I0->O           17   0.561   0.916  game_inst/a_not000121 (game_inst/N9)
+     LUT4:I2->O            2   0.561   0.380  game_inst/b_not00011 (game_inst/b_not0001)
+     FDE:CE                    0.156          game_inst/b_1
+    ----------------------------------------
+    Total                      4.579ns (2.102ns logic, 2.477ns route)
+                                       (45.9% logic, 54.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk253'
+  Total number of paths / destination ports: 6986 / 5
+-------------------------------------------------------------------------
+Offset:              15.543ns (Levels of Logic = 10)
+  Source:            signal_generator_inst/xpos_3 (FF)
+  Destination:       green (PAD)
+  Source Clock:      clk253 rising
+
+  Data Path: signal_generator_inst/xpos_3 to green
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             22   0.495   0.991  signal_generator_inst/xpos_3 (signal_generator_inst/xpos_3)
+     LUT4_D:I3->O          3   0.561   0.559  game_inst/brick1_cmp_ge00001 (game_inst/brick1_cmp_ge00001)
+     LUT4:I0->O           18   0.561   0.974  game_inst/brick1_cmp_ge00002 (game_inst/brick1_cmp_ge0000)
+     LUT2_D:I1->O          4   0.562   0.501  game_inst/green1111 (game_inst/N73)
+     LUT4:I3->O            1   0.561   0.465  game_inst/green95 (game_inst/green95)
+     LUT4:I0->O            1   0.561   0.465  game_inst/green105_SW0 (N571)
+     LUT4:I0->O            1   0.561   0.465  game_inst/green105 (game_inst/green105)
+     LUT4:I0->O            1   0.561   0.465  game_inst/green173 (game_inst/green173)
+     LUT4:I0->O            1   0.561   0.359  game_inst/green217_SW0 (N481)
+     LUT4:I3->O            1   0.561   0.357  game_inst/green217 (green_OBUF)
+     OBUF:I->O                 4.396          green_OBUF (green)
+    ----------------------------------------
+    Total                     15.543ns (9.941ns logic, 5.602ns route)
+                                       (64.0% logic, 36.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.76 secs
+ 
+--> 
+
+Total memory usage is 262312 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   61 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+
