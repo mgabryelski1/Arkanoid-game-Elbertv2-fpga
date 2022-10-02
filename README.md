@@ -7,7 +7,7 @@ The target hardware for this Arkanoid implementation is the `Numato LAB` FPGA ki
 ### Project description
 Because I grew up in the 1980s (I started high school in 1981) I spent a lot of time playing simple games on "slot machines" (in my town then there were three large arcades and a lot of separate machines). One of my favorite games back then was "Breakout" (also known as Arkanoid) so I decided to look to see if some version of this game would run on the FPGA set. I found two implementations of this game: one extended with many levels and nice graphics - but its implementation was based on a soft-processor and consuming a lot of FPGA resources, while the other was very simple implemented in the "ordinary logic blocks" of the FPGA and consuming little resources. I decided to run the second very simple implementation (one level of the game) on the ElbertV.2 FPGA set.
 
-The entire project was based on the code base from this website:
+The entire project was based on the code from this website:
 [Breakout-Game](https://www.instructables.com/Breakout-Game/)
 
 In this repository in catalog `Xilinx_ISE_14.7_Project`is placed all `Xilinx ISE
